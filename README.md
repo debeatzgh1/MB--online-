@@ -280,3 +280,226 @@
 
 </body>
 </html>
+
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telegram Tools & Bots | Official Links</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --tg:#229ED9;
+  --bg:#0f172a;
+  --card:#020617;
+  --border:#1e293b;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:Inter,system-ui;
+  background:linear-gradient(180deg,#020617,#020617 60%,#020617);
+  color:var(--text);
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+
+header{
+  text-align:center;
+  padding:30px 15px;
+}
+
+header h1{
+  font-size:28px;
+  font-weight:700;
+}
+
+header p{
+  color:var(--muted);
+  margin-top:8px;
+  font-size:15px;
+}
+
+.section{
+  margin-top:35px;
+}
+
+.section h2{
+  font-size:18px;
+  margin-bottom:15px;
+  color:#38bdf8;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:15px;
+}
+
+.card{
+  background:linear-gradient(180deg,#020617,#020617);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:16px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.card h3{
+  font-size:16px;
+  font-weight:600;
+}
+
+.card p{
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.5;
+}
+
+.card a{
+  margin-top:auto;
+  background:var(--tg);
+  color:white;
+  text-decoration:none;
+  text-align:center;
+  padding:12px;
+  border-radius:10px;
+  font-weight:600;
+  transition:.2s;
+}
+
+.card a:hover{
+  background:#1d8dc1;
+}
+
+footer{
+  text-align:center;
+  margin:40px 0 20px;
+  color:var(--muted);
+  font-size:13px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+  <h1>🚀 Telegram Bots & Tools</h1>
+  <p>Verified earning bots, crypto tools, VPNs & Telegram Stars services</p>
+</header>
+
+<!-- CRYPTO & MINING -->
+<div class="section">
+<h2>⛏️ Crypto & Mining Bots</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Mining Stone Coin</h3>
+    <p>Automated mining & reward bot for Telegram users.</p>
+    <a href="https://t.me/Miningstoncoin99_bot?start=_tgr_qqyyShM5Mjg0" target="_blank">Open Bot</a>
+  </div>
+
+  <div class="card">
+    <h3>Metamon Bot</h3>
+    <p>Play-to-earn crypto game bot with rewards.</p>
+    <a href="https://t.me/Metamon969_Bot?start=_tgr_f4IOomcxNWM8" target="_blank">Open Bot</a>
+  </div>
+
+  <div class="card">
+    <h3>Crypto Signals</h3>
+    <p>Daily crypto trading signals & alerts.</p>
+    <a href="https://t.me/cryptozsignals_bot?start=_tgr_oI6kA6VmNWU0" target="_blank">Join Signals</a>
+  </div>
+</div>
+</div>
+
+<!-- TELEGRAM STARS -->
+<div class="section">
+<h2>⭐ Telegram Stars & Payments</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Accept Telegram Stars</h3>
+    <p>Accept and manage Telegram Stars payments easily.</p>
+    <a href="https://t.me/Accepttelegramstarsbot?start=_tgr_ZukXam5iZWU8" target="_blank">Launch Bot</a>
+  </div>
+
+  <div class="card">
+    <h3>Star Wallet Auto</h3>
+    <p>Auto wallet for Telegram Stars transactions.</p>
+    <a href="https://t.me/Starwalletauto_bot?start=_tgr_rpYLlQw5MmM0" target="_blank">Launch Bot</a>
+  </div>
+
+  <div class="card">
+    <h3>Stars Buyer</h3>
+    <p>Buy and manage Telegram Stars securely.</p>
+    <a href="https://t.me/Starsbuyerro_bot?start=_tgr_eAkQRNsxMzdk" target="_blank">Open Bot</a>
+  </div>
+</div>
+</div>
+
+<!-- GAMES & REWARDS -->
+<div class="section">
+<h2>🎮 Games & Rewards</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Spin Star</h3>
+    <p>Spin, play and earn rewards daily.</p>
+    <a href="https://t.me/SpinStar5_bot?start=_tgr_TjzwOUxjYzU8" target="_blank">Play Now</a>
+  </div>
+
+  <div class="card">
+    <h3>Sell Game</h3>
+    <p>Game marketplace & earning bot.</p>
+    <a href="https://t.me/Sellgameqt_bot?start=_tgr_u9i-SS1iY2I0" target="_blank">Open Bot</a>
+  </div>
+
+  <div class="card">
+    <h3>Farmer Better</h3>
+    <p>Farming-style earning game on Telegram.</p>
+    <a href="https://t.me/farmer_better_bot?start=_tgr_JFEO8R1mYTQ0" target="_blank">Start Farming</a>
+  </div>
+</div>
+</div>
+
+<!-- VPN & TOOLS -->
+<div class="section">
+<h2>🔐 VPN & Utility Bots</h2>
+<div class="grid">
+  <div class="card">
+    <h3>Blym VPN</h3>
+    <p>Fast & secure VPN directly on Telegram.</p>
+    <a href="https://t.me/BlymVpn_bot?start=_tgr_Ym32F-1jOWI0" target="_blank">Connect VPN</a>
+  </div>
+
+  <div class="card">
+    <h3>Good Boy VPN</h3>
+    <p>Simple VPN bot with instant access.</p>
+    <a href="https://t.me/Vpn_for_good_boy_bot?start=_tgr_O09My4wzYjY0" target="_blank">Use VPN</a>
+  </div>
+
+  <div class="card">
+    <h3>BP Proxy</h3>
+    <p>Proxy services for Telegram access.</p>
+    <a href="https://t.me/bpproxy_bot?start=_tgr_W4on3U4xMjFk" target="_blank">Open Proxy</a>
+  </div>
+</div>
+</div>
+
+<footer>
+  © 2026 • Powered by Debeatzgh • Telegram Affiliate Hub
+</footer>
+
+</div>
+</body>
+</html>
+
