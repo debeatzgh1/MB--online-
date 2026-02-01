@@ -1,3 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Brands Online | News Feed</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .glass-morphism {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .carousel-track { transition: transform 0.5s ease-in-out; }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <div class="max-w-6xl mx-auto px-4 py-8">
+        <header class="mb-10 text-center">
+            <h1 class="text-4xl font-bold text-gray-800">My Brands Online</h1>
+            <p class="text-gray-500 mt-2">Latest Professional Updates & Insights</p>
+        </header>
+
+        <section class="mb-12 relative overflow-hidden rounded-2xl shadow-xl bg-slate-900 text-white p-8">
+            <div class="flex items-center mb-4">
+                <span class="bg-blue-600 text-xs font-bold px-2 py-1 rounded mr-2">AI SUMMARY</span>
+                <h2 class="text-xl font-semibold">Featured Highlights</h2>
+            </div>
+            
+            <div id="carousel" class="h-48 relative">
+                <div id="carousel-content" class="absolute w-full h-full flex flex-col justify-center">
+                    <p id="ai-text" class="text-lg italic leading-relaxed text-gray-200">Loading latest summaries...</p>
+                    <a id="ai-link" href="#" class="mt-4 text-blue-400 hover:underline inline-block">Read full story →</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <div class="lg:col-span-1 space-y-4 overflow-y-auto max-h-[700px] pr-2" id="feed-list">
+                <div class="animate-pulse flex flex-col space-y-4">
+                    <div class="h-24 bg-gray-200 rounded-lg"></div>
+                    <div class="h-24 bg-gray-200 rounded-lg"></div>
+                    <div class="h-24 bg-gray-200 rounded-lg"></div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 sticky top-4">
+                <div class="glass-morphism rounded-2xl shadow-2xl overflow-hidden border border-gray-200 h-[700px] flex flex-col">
+                    <div class="bg-white p-4 border-b flex justify-between items-center">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-400"></span>
+                            <span id="preview-title" class="ml-4 text-sm font-medium text-gray-600 truncate max-w-xs">Select a post to preview</span>
+                        </div>
+                        <a id="new-tab-btn" href="https://mybrandsonline.blogspot.com/" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm transition flex items-center">
+                            Open in New Tab <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                    <iframe id="preview-iframe" src="https://mybrandsonline.blogspot.com/" class="w-full flex-grow border-none"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const RSS_URL = 'https://mybrandsonline.blogspot.com/feeds/posts/default?alt=json';
+        let posts = [];
+        let currentCarouselIndex = 0;
+
+        async function fetchFeed() {
+            try {
+                const response = await fetch(RSS_URL);
+                const data = await response.json();
+                posts = data.feed.entry;
+                renderFeed();
+                startCarousel();
+            } catch (error) {
+                console.error('Error fetching feed:', error);
+            }
+        }
+
+        function renderFeed() {
+            const container = document.getElementById('feed-list');
+            container.innerHTML = '';
+
+            posts.forEach((post, index) => {
+                const title = post.title.$t;
+                const link = post.link.find(l => l.rel === 'alternate').href;
+                const published = new Date(post.published.$t).toLocaleDateString();
+                const snippet = post.content.$t.replace(/<[^>]*>?/gm, '').substring(0, 100) + '...';
+
+                const card = document.createElement('div');
+                card.className = "p-4 bg-white rounded-xl shadow-sm border border-gray-100 cursor-pointer hover:border-blue-500 transition-all group";
+                card.onclick = () => updatePreview(link, title);
+                
+                card.innerHTML = `
+                    <p class="text-[10px] text-blue-600 font-bold uppercase mb-1">${published}</p>
+                    <h3 class="font-bold text-gray-800 group-hover:text-blue-600 transition-colors line-clamp-2">${title}</h3>
+                    <p class="text-sm text-gray-500 mt-2 line-clamp-2">${snippet}</p>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function updatePreview(url, title) {
+            document.getElementById('preview-iframe').src = url;
+            document.getElementById('preview-title').innerText = title;
+            document.getElementById('new-tab-btn').href = url;
+        }
+
+        function startCarousel() {
+            const aiText = document.getElementById('ai-text');
+            const aiLink = document.getElementById('ai-link');
+
+            function updateCarousel() {
+                const post = posts[currentCarouselIndex];
+                const title = post.title.$t;
+                const snippet = post.content.$t.replace(/<[^>]*>?/gm, '').substring(0, 180) + '...';
+                const link = post.link.find(l => l.rel === 'alternate').href;
+
+                aiText.style.opacity = 0;
+                setTimeout(() => {
+                    aiText.innerText = `"${snippet}"`;
+                    aiLink.href = link;
+                    aiText.style.opacity = 1;
+                }, 500);
+
+                currentCarouselIndex = (currentCarouselIndex + 1) % posts.length;
+            }
+
+            updateCarousel();
+            setInterval(updateCarousel, 6000); // Auto slide every 6 seconds
+        }
+
+        fetchFeed();
+    </script>
+</body>
+</html>
+
 
 <html lang="en">
 <head>
