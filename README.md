@@ -1,3 +1,7 @@
+<!-- Elfsight Slider | Untitled Slider -->
+<script src="https://elfsightcdn.com/platform.js" async></script>
+<div class="elfsight-app-749254b7-56a7-4b52-b472-0417608aa2ae" data-elfsight-app-lazy></div>
+
 
 <html lang="en">
 <head>
