@@ -166,12 +166,12 @@
         <div id="banner-ent" class="floating-banner banner-entertainment" style="display: none;">
             <div class="banner-text-slider">
                 <div class="slide-inner">
-                    <span style="color: var(--yt-red);">🎬 Entertainment Hub</span>
+                    <span style="color: var(--yt-red);">🎬 Productivity tools And Ai hub</span>
                     <span style="color: var(--yt-red);">🎵 Stream Playlists</span>
                     <span style="color: var(--yt-red);">🔴 Live Updates</span>
                 </div>
             </div>
-            <button class="action-btn" style="background: var(--yt-red);" onclick="launch('https://docs.google.com/document/d/1yTeRMaF8GEkTZf34EK7eOdxe6sCOCNxX/edit?usp=drivesdk&ouid=116845182021782803040&rtpof=true&sd=true', 'Entertainment Player')">Watch</button>
+            <button class="action-btn" style="background: var(--yt-red);" onclick="launch('https://docs.google.com/document/d/1yTeRMaF8GEkTZf34EK7eOdxe6sCOCNxX/edit?usp=drivesdk&ouid=116845182021782803040&rtpof=true&sd=true', 'productivity hub')">Watch</button>
         </div>
 
         <div id="banner-ui" class="floating-banner banner-ui" style="display: none;">
