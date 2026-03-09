@@ -14,7 +14,7 @@
     .float-wrapper {
         position: fixed;
         bottom: 20px;
-        left: 40%;
+        left: 20%;
         transform: translateX(-50%);
         display: flex;
         flex-direction: column;
