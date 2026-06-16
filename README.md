@@ -524,7 +524,7 @@
             border-radius: 50px;
             border: none;
             color: white;
-            font-weight: 900;
+            font-weight: 700;
             font-size: 0.7rem;
             cursor: pointer;
             text-transform: uppercase;
@@ -594,7 +594,7 @@
                     <span style="color: var(--deep-pink);">📈 All in one place!</span>
                 </div>
             </div>
-            <button class="action-btn" style="background: var(--deep-pink);" onclick="launch('https://docs.google.com/document/d/1yTeRMaF8GEkTZf34EK7eOdxe6sCOCNxX/edit?usp=drivesdk&ouid=116845182021782803040&rtpof=true&sd=true', 'Productivity Hub')">Open Hub</button>
+            <button class="action-btn" style="background: var(--deep-pink);" onclick="launch('https://debeatzgh.wordpress.com/paid-partnership-programs/', 'Productivity Hub')">Open Hub</button>
         </div>
 
         <div id="banner-ent" class="floating-banner banner-entertainment" style="display: none;">
@@ -605,7 +605,7 @@
                     <span style="color: var(--yt-red);">🔴 Live Updates</span>
                 </div>
             </div>
-            <button class="action-btn" style="background: var(--yt-red);" onclick="launch('https://docs.google.com/document/d/1yTeRMaF8GEkTZf34EK7eOdxe6sCOCNxX/edit?usp=drivesdk&ouid=116845182021782803040&rtpof=true&sd=true', 'productivity hub')">Watch</button>
+            <button class="action-btn" style="background: var(--yt-red);" onclick="launch('https://debeatzgh.wordpress.com/paid-partnership-programs/', 'productivity hub')">Watch</button>
         </div>
 
         <div id="banner-ui" class="floating-banner banner-ui" style="display: none;">
