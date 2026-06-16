@@ -346,7 +346,7 @@
                     <span style="color: var(--yt-red);">🔴 Live Updates</span>
                 </div>
             </div>
-            <button class="action-btn" style="background: var(--yt-red);" onclick="launch('https://docs.google.com/document/d/1yTeRMaF8GEkTZf34EK7eOdxe6sCOCNxX/edit?usp=drivesdk&ouid=116845182021782803040&rtpof=true&sd=true', 'productivity hub')">Watch</button>
+            <button class="action-btn" style="background: var(--yt-red);" onclick="launch('https://debeatzgh.wordpress.com/paid-partnership-programs/', 'productivity hub')">Watch</button>
         </div>
 
         <div id="banner-ui" class="floating-banner banner-ui" style="display: none;">
